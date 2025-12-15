@@ -1,11 +1,123 @@
-<div align="center">
+# 寻味厨房 (XunWei Kitchen) 🥢
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+**寻味厨房** 是一款基于 Google Gemini AI 打造的智能中式烹饪伴侣。它不仅仅是一个食谱应用，更是一个融合了中国传统文化、节气养生与现代 AI 技术的个人饮食顾问。
 
-  <h1>Built with AI Studio</h2>
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![React](https://img.shields.io/badge/React-19-blue)
+![Gemini](https://img.shields.io/badge/AI-Google%20Gemini-orange)
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## ✨ 主要功能
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+1.  **🔮 本命菜探寻 (Soul Dish Analysis)**
+    *   输入您的名字和籍贯，AI 将结合地域饮食文化与姓名意象，为您解析出专属的“本命菜”和性格风味分析，并附赠一首专属诗词。
 
-</div>
+2.  **🌱 节气时令 (Solar Terms)**
+    *   自动识别当前节气，提供基于中医养生理念的饮食建议。
+    *   **每日三餐推荐**：根据节气特点，智能生成早、中、晚三餐的推荐菜谱。
+
+3.  **🍳 寻味灵感 (Smart Search)**
+    *   **搜菜名**：直接输入菜名，获取包含步骤、技巧、热量分析的详细食谱。
+    *   **配食材**：输入冰箱里的剩余食材，AI 为您量身定制推荐菜单，杜绝浪费。
+
+4.  **📚 菜谱大全 (Recipe Book)**
+    *   囊括八大菜系与特色分类（如川菜、鲁菜、面点等）。
+    *   点击分类即可实时生成经典代表菜肴列表。
+
+5.  **💖 我的味蕾记忆 (My Kitchen)**
+    *   收藏您喜爱的食谱，并按状态管理：
+        *   **跃跃欲试** (待烹饪)
+        *   **小试牛刀** (已尝试)
+        *   **小有成就** (已掌握)
+    *   记录烹饪笔记与个人评分。
+
+## 🛠️ 技术栈
+
+*   **前端框架**: [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+*   **构建工具**: [Vite](https://vitejs.dev/)
+*   **UI 样式**: [Tailwind CSS](https://tailwindcss.com/)
+*   **图标库**: [Lucide React](https://lucide.dev/)
+*   **人工智能**: [Google Gemini API](https://ai.google.dev/) (`@google/genai` SDK)
+    *   使用 `gemini-2.5-flash` 进行文本生成。
+    *   使用 `gemini-2.5-flash-image` 进行食谱配图生成。
+
+## 🚀 快速开始
+
+### 前置要求
+
+*   [Node.js](https://nodejs.org/) (版本 18+ 推荐)
+*   npm 或 yarn
+*   一个 Google Gemini API Key (可在 [Google AI Studio](https://aistudio.google.com/) 免费获取)
+
+### 安装步骤
+
+1.  **克隆仓库**
+    ```bash
+    git clone https://github.com/your-username/xunwei-kitchen.git
+    cd xunwei-kitchen
+    ```
+
+2.  **安装依赖**
+    ```bash
+    npm install
+    ```
+
+3.  **配置环境变量**
+    *   在项目根目录创建一个 `.env` 文件。
+    *   复制 `.env.example` 的内容，并填入您的 API Key。
+    
+    ```properties
+    API_KEY=your_actual_api_key_here
+    ```
+
+4.  **启动开发服务器**
+    ```bash
+    npm run dev
+    ```
+    打开浏览器访问 `http://localhost:3000`。
+
+## 📦 编译与部署
+
+要构建用于生产环境的应用：
+
+1.  **构建**
+    ```bash
+    npm run build
+    ```
+    构建产物将生成在 `dist` 目录下。
+
+2.  **本地预览**
+    ```bash
+    npm run preview
+    ```
+
+3.  **部署**
+    您可以将 `dist` 目录部署到任何静态网站托管服务，如：
+    *   GitHub Pages
+    *   Vercel
+    *   Netlify
+
+## 📁 项目结构
+
+```
+xunwei-kitchen/
+├── components/        # React 组件 (导航, 菜谱卡片等)
+├── services/          # API 服务 (Gemini AI 调用逻辑)
+├── types.ts           # TypeScript 类型定义
+├── App.tsx            # 主应用路由逻辑
+├── index.tsx          # 入口文件
+├── index.css          # 全局样式 (Tailwind 指令)
+├── index.html         # HTML 模板
+├── vite.config.ts     # Vite 配置
+├── tailwind.config.js # Tailwind 配置
+└── package.json       # 依赖管理
+```
+
+## 🤝 贡献指南
+
+欢迎提交 Issue 或 Pull Request！
+如果您有新的创意（比如增加“食疗分析”或“语音助手”功能），请随时联系。
+
+## 📄 开源协议
+
+MIT License
+```
